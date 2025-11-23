@@ -1,0 +1,3 @@
+C:\AndroidAPK\FPVScannerFinal\app\src\main\java\com\example\fpvscanner\HackrfBackend.kt
+C:\AndroidAPK\FPVScannerFinal\app\src\main\java\com\example\fpvscanner\SpectrumView.kt
+C:\AndroidAPK\FPVScannerFinal\app\src\main\java\com\example\fpvscanner\MainActivity.kt
