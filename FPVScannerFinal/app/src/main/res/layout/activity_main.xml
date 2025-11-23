@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- TITLE -->
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FPV Scanner (HackRF)"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- STATUS -->
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HackRF status: UNKNOWN"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- BAND SELECTOR -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Band:"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spinnerBand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" />
+
+        <!-- START / STOP BUTTONS -->
+        <Button
+            android:id="@+id/btnStartScan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Scan"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnStopScan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stop Scan"
+            android:layout_marginBottom="20dp" />
+
+        <!-- GAIN SETTINGS TITLE -->
+        <TextView
+            android:id="@+id/txtGainTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gain settings"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp" />
+
+        <!-- LNA GAIN -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LNA:"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="8dp" />
+
+            <SeekBar
+                android:id="@+id/sbLnaGain"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="40" />
+
+            <TextView
+                android:id="@+id/txtLnaGainValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 dB"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- VGA GAIN -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VGA:"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="8dp" />
+
+            <SeekBar
+                android:id="@+id/sbVgaGain"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="62" />
+
+            <TextView
+                android:id="@+id/txtVgaGainValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 dB"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- AMP SWITCH -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AMP:"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="8dp" />
+
+            <Switch
+                android:id="@+id/swAmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enable RF AMP"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- LAST DETECTION -->
+        <TextView
+            android:id="@+id/txtLastDetection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Last detection: none"
+            android:textColor="#00FF00"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- LOG WINDOW -->
+        <TextView
+            android:id="@+id/txtLog"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#222222"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:padding="10dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- OPEN LOGS BUTTON -->
+        <Button
+            android:id="@+id/btnOpenLogs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open Logs Folder" />
+
+    </LinearLayout>
+
+</ScrollView>
